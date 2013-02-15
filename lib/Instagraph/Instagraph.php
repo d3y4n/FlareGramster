@@ -15,9 +15,9 @@ class Instagraph
   public $_input = null;
   public $_output = null;
   public $_prefix = 'IMG';
-  private $_width = null;
-  private $_height = null;
-  private $_tmp = null;
+  public $_width = null;
+  public $_height = null;
+  public $_tmp = null;
   
   public function setInput($path)
   {
@@ -25,9 +25,10 @@ class Instagraph
     {
       $this->_input = $path;
       list($this->_width, $this->_height) = getimagesize($path);
-      if($this->_width > 720)
+      if($this->_width > 612)
       {
-        $this->resize(720, 480);
+        $this->resize(612, 612);
+        list($this->_width, $this->_height) = getimagesize($path);
       }
       return true;
     }
@@ -82,7 +83,7 @@ class Instagraph
 
   public function resize($w, $h)
   {
-    $this->execute("convert $this->_input -resize {$w}x{$h} -unsharp 1.5×1.0+1.5+0.02 $this->_input");
+    $this->execute("convert $this->_input -resize {$w}x{$h}! -unsharp 1.5×1.0+1.5+0.02 $this->_input");
   }
 
   public function colortone($color, $level, $type = 0)
