@@ -33,7 +33,7 @@ if( ! empty($_GET['url']))
 
 if (isset($_GET['__ajax']) OR isset($_SERVER['HTTP_X_REQUESTED_WITH']))
 {
-  $output = str_replace(array('\\', str_replace('\\', '/', __DIR__)), array('/', ''), $output);
+  $output = str_replace(array('\\', str_replace('\\', '/', __DIR__ . '/')), array('/', ''), $output);
   header('Location: ' . $output, TRUE, 301);
   die;
 }
