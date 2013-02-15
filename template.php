@@ -43,7 +43,7 @@ a{color:#fff;text-shadow: 0 0 10px #fff;text-decoration:none;}
           <h1>
             1. Enter Image URL (size will be 612px by 612px)
           </h1>
-          <input type="text" name="url" value="https://pbs.twimg.com/media/A8S4f4PCQAA-BT2.jpg" class="dark-shadow" />
+          <input type="text" name="url" value="http://i.imgur.com/XTBwBhB.jpg" class="dark-shadow" />
           <h1>
             2. Over Saturation 
           </h1>
@@ -81,7 +81,7 @@ a{color:#fff;text-shadow: 0 0 10px #fff;text-decoration:none;}
           return;
         }
         
-        $('#result').attr('src', '/index.php?__ajax=1&url=' + url);
+        $('#result').attr('src', 'index.php?__ajax=1&url=' + url);
         
       });
     </script>
