@@ -4,6 +4,12 @@
 - Flares taken from: http://softboxindia.deviantart.com/art/Lightning-Flares-Photoshop-312504033
 - Hipster douches from Google Images
 
+## Examples (before/after)
+
+![absinthe](http://i4.minus.com/jsoeOuXgiHjwv.jpg)
+![scenic road](http://i7.minus.com/i0BJi22f4UGGP.jpg)
+![seagulls and shit](http://i2.minus.com/iIXKLNPjBT3jJ.jpg)
+
 ## Example Usage
 
 ```php
@@ -15,6 +21,14 @@
   $flareGramster->addFrame();
   $flareGramster->output();
 ```
+
+## @todo
+
+- Add option to select flare
+- Add option to select hipster
+- Add more hipsters
+- Add more options for image manipulation
+- Add HELVETICA deep thoughts caption
 
 ## Demo
 
